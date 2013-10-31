@@ -23,6 +23,7 @@ for file in $files; do
     rm $target
   fi
   if [[ -e $target ]]; then
+    rm -rf $backup
     mv $target $backup
   fi
 
