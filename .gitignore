@@ -1,8 +1,3 @@
-*.pyc
-*.class
-bin/server
-vim/.netrwhist
-local/*
-build/*
-*.orig
-.vagrant*
+old
+fishd.*
+fish_*history

@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# ssh michael@xxx "wget https://raw.github.com/crosbymichael/.dotfiles/master/init.sh && chmod +x init.sh && sudo ./init.sh michael"
+# ssh michael@xxx "wget https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh && chmod +x init.sh && sudo ./init.sh michael"
 
-apt-get update
-apt-get install -y git-core
+# sudo apt-get install -y git-core
 
-export USER_NAME=$1
-
-git clone https://github.com/crosbymichael/.dotfiles
+cd $HOME
+git clone https://github.com/jtomaszewski/.dotfiles
 cd .dotfiles/
-git submodule update --init
-./bootstrap.sh
+git submodule update --init --recursive
+
+sudo ./install.sh
+
+chsh -s /usr/bin/fish
+./create_symlinks.sh
 
 echo "All done"

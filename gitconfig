@@ -1,0 +1,51 @@
+[user]
+  name = Jacek Tomaszewski
+  email = kontakt@jtomaszewski.eu
+[http]
+  sslVerify = false
+[alias]
+  skip = update-index --assume-unchanged
+  unskip = update-index --assume-changed
+  c = commit
+  cl = clone
+  co = checkout
+  f = fetch
+  b = branch
+  cp = cherry-pick
+  com = checkout master
+  st = status
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ca = commit --amend --reuse-message=HEAD
+  cleanse = !git ls-files --others --exclude-standard | xargs rm
+  conflicts = !git ls-files -u | cut -f 2 | sort -u
+  root = !cd $(git rev-parse --show-toplevel)
+  todo = grep --heading --break --ignore-case -e 'TODO'
+  ac = !git add --all && git commit -a -m
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
+  acc = !git add . && git commit -a --reuse-message=HEAD
+  authors = "!git log --format='%aN <%aE>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn | cut -d' ' -f2-"
+  subtree = "!/apps/git/contrib/subtree/git-subtree.sh"
+  subtree-merge = "!f(){ git fetch $2 && git subtree merge --prefix=$1 $2/$3; }; f" # arguments: [prefix, remote, branch]
+  subtree-push = "!f(){ git subtree split --prefix $1 -b $3 && git push $2 $2:$3; }; f" # same as above
+  publish = "!f(){ git push -u $1 $(git symbolic-ref --short HEAD); }; f"
+  aa = add --all
+[color "status"]
+  added = green
+  modified = red
+  untracked = blue
+[color]
+	ui = true
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = /home/slimak/.gitignore_global
+  editor = vim
+[mergetool "sublime"]
+  cmd = sublime -w $MERGED
+  trustExitCode = false
+[github]
+	user = jtomaszewski
+[push]
+	default = simple
