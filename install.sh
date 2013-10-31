@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y git-core htop wget curl zsh
+apt-get install -y git-core htop wget curl zsh vim
 
 # Hub not working yet
 # mkdir -p ~/bin/hub
