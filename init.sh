@@ -7,12 +7,12 @@ git clone https://github.com/jtomaszewski/.dotfiles
 cd .dotfiles
 ./update.sh
 
-read -p "run install.sh? (needed sudo rights)" answer
-if [[ "$answer" = "y" ]] ; then
+read -p "run install.sh? (needed sudo rights) (y/n)" answer
+if [ "$answer" = "y" ] ; then
   sudo ./install.sh
 fi
 
-read -p "default shell: fish/zsh? [yn]" answer
+read -p "chsh: fish/zsh? (or nothing)" answer
 if [ "$answer" = "zsh" ]; then
   if [ -n `which zsh` ]; then
     chsh -s `which zsh`
