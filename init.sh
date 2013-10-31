@@ -7,11 +7,11 @@
 cd $HOME
 git clone https://github.com/jtomaszewski/.dotfiles
 
+cd .dotfiles
 ./update.sh
 
-read -p "Run install.sh script?" -n 1 -r
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
+read -p "Run install.sh? [yn]" answer
+if [[ $answer = y ]] ; then
   sudo ./install.sh
 fi
 
