@@ -7,8 +7,7 @@
 cd $HOME
 git clone https://github.com/jtomaszewski/.dotfiles
 
-cd .dotfiles/
-git submodule update --init --recursive
+./update.sh
 
 read -p "Run install.sh script?" -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -17,6 +16,5 @@ then
 fi
 
 chsh -s /usr/bin/fish
-./create_symlinks.sh
 
 echo "All done"
