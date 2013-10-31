@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# ssh michael@xxx "wget https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh && chmod +x init.sh && sudo ./init.sh michael"
+# curl https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh | sh
 
 # sudo apt-get install -y git-core
 
 cd $HOME
 git clone https://github.com/jtomaszewski/.dotfiles
+
 cd .dotfiles/
 git submodule update --init --recursive
 
