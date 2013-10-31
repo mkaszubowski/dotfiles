@@ -10,11 +10,6 @@ apt-get install -y git-core htop wget curl tmux zsh \
     libreadline-dev tcpflow ruby rubygems \
     ranger sysstat
 
-# Install fish shell.
-# apt-key adv --keyserver keyserver.ubuntu.com --recv-key D880C8E4
-# echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_7.0/ ./' > /etc/apt/sources.list.d/fish-shell.list
-apt-get install fish
-echo "It's propably fish v1. Please, visit fish2 website to see how to isntall it."
-
-mkdir -p ~/bin/hub
-curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
+# Hub not working yet
+# mkdir -p ~/bin/hub
+# curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
