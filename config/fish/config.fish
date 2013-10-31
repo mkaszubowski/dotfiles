@@ -3,6 +3,8 @@ set fish_path $HOME/.oh-my-fish
 
 # Theme
 set fish_theme slimakthefish
+set theme_display_user yes
+set default_user slimak
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
