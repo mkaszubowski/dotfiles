@@ -1,4 +1,9 @@
-function g
-  set git (which hub; or which git) $argv
-	eval $git; 
+if which hub
+  function g
+  	hub $argv;
+  end
+else
+  function g
+    git $argv;
+  end
 end
