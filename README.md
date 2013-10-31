@@ -5,6 +5,10 @@ The argument to init.sh is the user's name that you want the dotfiles to be inst
 ```bash
 curl https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh > /tmp/init.sh && sh /tmp/init.sh
 ```
+#### Powerline font support
+python required.
+http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin
+
 
 
 # Thanks to
