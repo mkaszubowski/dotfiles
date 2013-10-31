@@ -15,6 +15,11 @@ if [[ $answer = y ]] ; then
   sudo ./install.sh
 fi
 
-chsh -s /usr/bin/fish
+read -p "default shell: fish/zsh? [yn]" answer
+if [[ $answer = 'zsh' ]] ; then
+  chsh -s `which zsh`
+else
+  chsh -s /usr/bin/fish
+fi
 
 echo "All done"
