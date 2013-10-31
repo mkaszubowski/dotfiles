@@ -11,6 +11,9 @@ files="gitconfig gitignore_global config/fish pryrc rspec bashrc bash_aliases oh
 echo "Existing dotfiles will be moved to $backup_dir."
 mkdir -p $backup_dir
 
+mkdir -p $backup_dir/old/config
+mkdir -p $HOME/.config
+
 for file in $files; do
   source=$dir/$file
   target=$HOME/.$file
