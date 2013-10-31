@@ -3,7 +3,7 @@ Make sure you can ssh into your fresh install of Ubuntu and run this command.
 The argument to init.sh is the user's name that you want the dotfiles to be installed to.
 
 ```bash
-curl https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh | sh
+curl https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh > /tmp/init.sh && sh /tmp/init.sh
 ```
 
 
