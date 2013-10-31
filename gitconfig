@@ -48,4 +48,4 @@
 [github]
 	user = jtomaszewski
 [push]
-	default = simple
+	default = current
