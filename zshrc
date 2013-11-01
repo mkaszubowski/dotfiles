@@ -5,7 +5,15 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pygmalion"
+
+if test -f "`which powerline`"
+then
+  ZSH_THEME="powerline"
+else
+  ZSH_THEME="pygmalion"
+fi
+
+TERM="xterm-256color" 
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -31,8 +39,10 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rbenv bower capistrano coffee cp gem github heroku npm rails4 rsync zeus)
+plugins=(git rbenv bower capistrano cp gem github heroku rails4 rsync zeus)
 
 source $ZSH/oh-my-zsh.sh
+
+source $HOME/.profile
 
 # Customize to your needs...
