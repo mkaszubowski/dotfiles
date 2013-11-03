@@ -5,7 +5,7 @@ dir=$HOME/.dotfiles
 backup_dir=$dir/old
 
 # list of files/folders to symlink in homedir
-files="gitconfig gitignore_global config/fish pryrc rspec bashrc bash_aliases oh-my-fish oh-my-zsh zshrc profile"
+files="gitconfig gitignore_global config/fish pryrc rspec bashrc bash_aliases oh-my-fish oh-my-zsh zshrc profile bash_profile"
 ##########
 
 echo "Existing dotfiles will be moved to $backup_dir."
