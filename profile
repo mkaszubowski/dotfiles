@@ -1,4 +1,4 @@
-# This file is ran in both bash and zsh.
+# This file is shared by both bash and zsh.
 
 if [ -d "$HOME/.local/bin" ]
 then
@@ -14,5 +14,7 @@ if [ -f "$HOME/.dotfiles/custom/profile" ]
 then
     source "$HOME/.dotfiles/custom/profile"
 fi
+
+export EDITOR=vim
 
 alias t=tmux
