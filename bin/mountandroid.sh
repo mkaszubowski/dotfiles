@@ -1,0 +1,1 @@
+go-mtpfs /media/MyAndroid

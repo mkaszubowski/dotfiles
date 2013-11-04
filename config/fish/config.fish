@@ -16,3 +16,7 @@ set fish_plugins rbenv bundler rake
 
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
+
+if test -d $HOME/.bin
+  set -x PATH $HOME/.bin $PATH
+end
