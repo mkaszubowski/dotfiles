@@ -1,3 +1,5 @@
+# This file is ran in both bash and zsh.
+
 if [ -d "$HOME/.local/bin" ]
 then
     PATH="$HOME/.local/bin:$PATH"
@@ -12,3 +14,5 @@ if [ -f "$HOME/.dotfiles/custom/profile" ]
 then
     source "$HOME/.dotfiles/custom/profile"
 fi
+
+alias t=tmux

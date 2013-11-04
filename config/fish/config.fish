@@ -17,6 +17,8 @@ set fish_plugins rbenv bundler rake
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
+set TERM xterm-256color
+
 if test -d $HOME/.bin
   set -x PATH $HOME/.bin $PATH
 end
