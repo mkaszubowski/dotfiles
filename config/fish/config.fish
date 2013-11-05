@@ -2,7 +2,7 @@
 set fish_path $HOME/.oh-my-fish
 
 # Theme
-set fish_theme slimakthefish
+set fish_theme bobthefish
 set theme_display_user yes
 set default_user slimak
 
