@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Replace login shell from bash with zsh. (cuz we don't always have rights to run chsh)
-if [ -f $(which zsh) ]
+if [ -f "$(which zsh 2> /dev/null)" ]
 then
   SHELL=$(which zsh) exec $(which zsh) --login
 fi
