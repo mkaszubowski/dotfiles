@@ -1,18 +1,17 @@
 # Description
-* oh-my-fish (but you need to install fish2 manually) & oh-my-zsh
-* some useful fish and zsh aliases, options
+* 3 tweaked shells: oh-my-fish, oh-my-zsh, bash-it. Default is **bash**, but if you'll install **zsh** or **fish2**, it will be tweaked automatically. `bash_profile` is configured in a way that it launches zsh automatically, if it exists on the machine.
+* useful shell aliases
 * my custom .gitconfig and .gitignore_global
-* some useful tweaks in .pryrc, .rspec, .bashrc, .zshrc
+* some useful tweaks in .pryrc, .rspec, .bashrc, .zshrc, tmux.conf, dir_colors and other files (see them all in `create_symlinks.sh`)
 
 ### How to install?
 ```bash
-curl https://raw.github.com/jtomaszewski/.dotfiles/master/init.sh > /tmp/init.sh && sh /tmp/init.sh
+curl https://raw.github.com/jtomaszewski/.dotfiles/master/download.sh > /tmp/download.sh && sh /tmp/download.sh
 ```
 
 ### Scripts description
-* init.sh - bootstraps all (update.sh, install.sh and changes the default shell). Everything is done by a user prompt dialog - don't worry, it won't do antyhing if you keep pressing `n`.
-* install.sh - installs required libraries. sudo rights needed.
-* update.sh - updates the .dotfiles repo from origin/master and runs `create_symlinks.sh`
+* init.sh - bootstraps all installation. Everything is done by a user prompt dialog - don't worry, it won't do antyhing if you keep pressing `n`.
+* update.sh - updates the .dotfiles repo and run `create_symlinks.sh`
 * create_symlinks.sh - creates the symlinks to dotfiles, moving the existing to ./old/ directory
 
 #### Powerline font support
