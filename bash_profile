@@ -23,8 +23,8 @@ export BASH_IT_THEME='bobby'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="/usr/bin/mate -w"
-export GIT_EDITOR='/usr/bin/mate -w'
+export EDITOR="/usr/bin/vim -w"
+export GIT_EDITOR='/usr/bin/vim -w'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
@@ -32,18 +32,9 @@ export NGINX_PATH='/opt/nginx'
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
-
-# Change this to your console based IRC client of choice.
-
-export IRC_CLIENT='irssi'
-
 # Set this to the command you use for todo.txt-cli
 
 export TODO="t"
-
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/xvzf/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
