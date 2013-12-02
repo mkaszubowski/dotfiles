@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Replace login shell from bash with zsh. (cuz we don't always have rights to run chsh)
-if [ -f "$(which zsh 2> /dev/null)" ]
-then
-  SHELL=$(which zsh) exec $(which zsh) --login
-fi
+#if [ -f "$(which zsh 2> /dev/null)" ]
+#then
+#  SHELL=$(which zsh) exec $(which zsh) --login
+#fi
 
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
