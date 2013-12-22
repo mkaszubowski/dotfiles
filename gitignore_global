@@ -11,8 +11,6 @@
 *.egg
 *.egg-info
 .installed.cfg
-lib
-lib64
 __pycache__
 
 # Installer logs
@@ -36,7 +34,6 @@ nosetests.xml
 .DS_Store
 .DS_Store?
 *~
-._*
 .Spotlight-V100
 .Trashes
 Icon?
