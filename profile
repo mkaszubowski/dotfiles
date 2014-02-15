@@ -24,9 +24,3 @@ fi
 
 export EDITOR=vim
 
-alias t=tmux
-
-if ! which apt 2> /dev/null
-then
-  alias apt=aptitude
-fi
