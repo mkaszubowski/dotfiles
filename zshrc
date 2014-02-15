@@ -34,7 +34,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git bundler rbenv bower capistrano cp gem github heroku rails4 rsync zeus tmux)
+plugins=(git rbenv bower capistrano cp gem github heroku rails4 rsync zeus tmux)
 
 source $ZSH/oh-my-zsh.sh
 
