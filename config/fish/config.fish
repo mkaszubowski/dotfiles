@@ -23,6 +23,10 @@ if test -d $HOME/.bin
   set -x PATH $HOME/.bin $PATH
 end
 
+if test -f $HOME/.dotfiles/custom/config.fish
+  . $HOME/.dotfiles/custom/config.fish
+end
+
 set -x EDITOR vim
 
 # Colors in `less`! 
