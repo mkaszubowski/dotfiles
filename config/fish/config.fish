@@ -27,6 +27,10 @@ if test -f $HOME/.dotfiles/custom/config.fish
   . $HOME/.dotfiles/custom/config.fish
 end
 
+if which direnv > /dev/null
+  eval (direnv hook fish)
+end
+
 set -x EDITOR vim
 
 # Colors in `less`! 
