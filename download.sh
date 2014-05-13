@@ -1,5 +1,7 @@
 #!/bin/sh
 
+REQUIRED_PACKAGES="git-core htop wget curl zsh vim tmux"
+
 if [ -n `which git` ]; then
   echo "please, install git by running command below:"
   echo "sudo apt-get install -y git-core"
@@ -10,14 +12,16 @@ git clone https://github.com/jtomaszewski/.dotfiles
 cd .dotfiles
 ./update.sh
 
-read -p "do you currently have sudo rights? (y/n)" answer
+read -p "do you currently have sudo rights and apt-get command? (y/n)" answer
 if [ "$answer" = "y" ] ; then
   sudo apt-get update
-  sudo apt-get install -y git-core htop wget curl zsh vim tmux
+  sudo apt-get install -y $REQUIRED_PACKAGES
 
   # Hub not working yet - install it manually
   # mkdir -p ~/bin/hub
   # curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
+else
+  echo "Make sure, you have installed and working $REQUIRED_PACKAGES."
 fi
 
 read -p "Do you want to set default shell? (by chsh - please, don't do it on root!): \"fish\"/\"zsh\"? (type nothing, if you don't want to)" answer
