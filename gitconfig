@@ -43,7 +43,7 @@
   excludesfile = /home/slimak/.gitignore_global
   editor = vim
 [mergetool "sublime"]
-  cmd = sublime -w $MERGED
+  cmd = subl -w $MERGED
   trustExitCode = false
 [github]
 	user = jtomaszewski
