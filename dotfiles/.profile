@@ -1,4 +1,4 @@
-# This file is shared by both bash and zsh.
+# This file is included in both bash and zsh.
 
 export RBENV_ROOT=/$HOME/.rbenv
 if [ -d $RBENV_ROOT/bin ]
