@@ -1,32 +1,38 @@
 #!/bin/bash
 
-########## Config
-dir=$HOME/.dotfiles
-backup_dir=$dir/old
+timestamp() {
+  date +"%s"
+}
 
-# list of files/folders to symlink in homedir
-files="bash_it dir_colors bin gitconfig gitignore_global config/fish pryrc rspec bashrc bash_aliases oh-my-fish oh-my-zsh zshrc profile bash_profile zprofile tmux.conf"
+########## Config
+DOTFILES_REPOSITORY_DIR="$HOME/.dotfiles"
+DOTFILES_DIR="$DOTFILES_REPOSITORY_DIR/dotfiles"
+BACKUP_DIR="$DOTFILES_REPOSITORY_DIR/old/`timestamp`"
 ##########
 
-echo "Existing dotfiles will be moved to $backup_dir."
-mkdir -p $backup_dir
+echo "Existing dotfiles will be moved to $BACKUP_DIR."
+mkdir -p $BACKUP_DIR
 
-mkdir -p $backup_dir/config
-mkdir -p $HOME/.config
-
-for file in $files; do
-  source=$dir/$file
-  target=$HOME/.$file
-  backup=$backup_dir/$file
+for file in $DOTFILES_DIR/.* $DOTFILES_DIR/*; do
+  filename=`basename $file`
+  source="$file"
+  target="$HOME/$filename"
+  backup="$BACKUP_DIR/$filename"
   
+  echo "Creating symlink to \"$filename\" in home directory."
+
+  # Remove if it's a symlink
   if [[ -h $target ]]; then
+    echo "Existing symlink to \"$filename\" has been removed."
     rm $target
   fi
+
+  # Move, if it exists
   if [[ -e $target ]]; then
+    echo "Existing \"$filename\" has been moved to \"$BACKUP_DIR\"."
     rm -rf $backup
     mv $target $backup
   fi
 
-  echo "Creating symlink to $file in home directory."
   ln -s $source $target 
 done

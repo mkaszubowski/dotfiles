@@ -1,4 +1,7 @@
-old
 fishd.*
 fish_*history
+
+# Legacy files
+bin
+old
 custom
