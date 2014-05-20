@@ -1,8 +1,8 @@
 [user]
   name = Jacek Tomaszewski
   email = jacek@jtom.me
-[http]
-  sslVerify = false
+#[http]
+#  sslVerify = false
 [alias]
   skip = update-index --assume-unchanged
   unskip = update-index --assume-changed
@@ -40,7 +40,7 @@
   status = auto
   branch = auto
 [core]
-  excludesfile = /home/slimak/.gitignore_global
+  excludesfile = $HOME/.gitignore_global
   editor = vim
 [mergetool "sublime"]
   cmd = subl -w $MERGED
@@ -49,3 +49,5 @@
 	user = jtomaszewski
 [push]
 	default = current
+[hub]
+	protocol = ssh
