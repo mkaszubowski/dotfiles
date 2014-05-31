@@ -19,7 +19,6 @@ create_symlink() {
   backup=$3
   filename=`basename $source`
 
-  echo "Creating symlink to \"$filename\" in home directory."
 
   # # Remove if it's a symlink
   if [[ -h $target ]]; then
@@ -33,6 +32,7 @@ create_symlink() {
     mv $target $backup
   fi
 
+  echo "Creating symlink to \"$filename\" in home directory."
   ln -s $source $target 
 }
 

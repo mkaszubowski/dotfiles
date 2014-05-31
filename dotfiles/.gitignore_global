@@ -48,3 +48,7 @@ Icon^M
 *~
 \#*\#
 /tags
+
+
+# my custom ignored files
+.credentials
