@@ -5,6 +5,7 @@ REQUIRED_PACKAGES="git-core htop wget curl zsh vim tmux"
 if [ -n `which git` ]; then
   echo "please, install git by running command below:"
   echo "sudo apt-get install -y git-core"
+  exit 1
 fi
 
 cd $HOME
