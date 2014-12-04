@@ -1,6 +1,6 @@
 emulate sh -c 'source ~/.profile'
 
-if [ -d /etc/profile.d ]; then
+if [ -d /etc/profile.d ] && [ "$(ls -A /etc/profile.d)" ]; then
   for i in /etc/profile.d/*.sh; do
     if [ -r $i ]; then
       emulate sh -c "source $i"
