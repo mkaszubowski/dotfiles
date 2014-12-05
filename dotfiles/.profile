@@ -24,3 +24,5 @@ fi
 
 export EDITOR=vim
 
+alias ai="apt-get install"
+alias as="apt search"
