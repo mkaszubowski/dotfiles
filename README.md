@@ -6,7 +6,7 @@
 
 ### How to install?
 ```bash
-curl https://raw.githubusercontent.com/jtomaszewski/.dotfiles/master/download.sh > /tmp/download.sh && sh /tmp/download.sh
+curl https://raw.githubusercontent.com/jtomaszewski/.dotfiles/master/download.sh | sh
 ```
 
 ### Scripts description
