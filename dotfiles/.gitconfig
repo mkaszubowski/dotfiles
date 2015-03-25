@@ -4,32 +4,35 @@
 #[http]
 #  sslVerify = false
 [alias]
-  skip = update-index --assume-unchanged
-  unskip = update-index --assume-changed
-  c = commit
-  cl = clone
-  co = checkout
-  f = fetch
-  b = branch
-  cp = cherry-pick
-  com = checkout master
-  st = status
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  ca = commit --amend --reuse-message=HEAD
-  cleanse = !git ls-files --others --exclude-standard | xargs rm
-  conflicts = !git ls-files -u | cut -f 2 | sort -u
-  root = !cd $(git rev-parse --show-toplevel)
-  todo = grep --heading --break --ignore-case -e 'TODO'
+  a = add
+  aa = add --all
   ac = !git add --all && git commit -a -m
-  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
-  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
   acc = !git add . && git commit -a --reuse-message=HEAD
+  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   authors = "!git log --format='%aN <%aE>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn | cut -d' ' -f2-"
+  b = branch
+  c = commit
+  ca = commit --amend --reuse-message=HEAD
+  cl = clone
+  cleanse = !git ls-files --others --exclude-standard | xargs rm
+  co = checkout
+  com = checkout master
+  conflicts = !git ls-files -u | cut -f 2 | sort -u
+  cp = cherry-pick
+  d = diff
+  f = fetch
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  root = !cd $(git rev-parse --show-toplevel)
+  skip = update-index --assume-unchanged
+  st = status
+  todo = grep --heading --break --ignore-case -e 'TODO'
+  unskip = update-index --assume-changed
   subtree = "!/apps/git/contrib/subtree/git-subtree.sh"
   subtree-merge = "!f(){ git fetch $2 && git subtree merge --prefix=$1 $2/$3; }; f" # arguments: [prefix, remote, branch]
   subtree-push = "!f(){ git subtree split --prefix $1 -b $3 && git push $2 $2:$3; }; f" # same as above
   publish = "!f(){ git push -u $1 $(git symbolic-ref --short HEAD); }; f"
-  aa = add --all
+  ptag = "!f(){ git ac $1; git tag $1 && git push && git push --tags; }; f"
 [color "status"]
   added = green
   modified = red
