@@ -5,7 +5,7 @@ timestamp() {
 }
 
 ########## Config
-DOTFILES_REPOSITORY_DIR="$HOME/.dotfiles"
+DOTFILES_REPOSITORY_DIR="$HOME/dotfiles"
 DOTFILES_DIR="$DOTFILES_REPOSITORY_DIR/dotfiles"
 BACKUP_DIR="$DOTFILES_REPOSITORY_DIR/old/`timestamp`"
 ##########

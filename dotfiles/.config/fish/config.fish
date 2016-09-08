@@ -44,13 +44,3 @@ set -x LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 set -gx PATH /usr/local/bin $PATH
 
-set -x COCOS_CONSOLE_ROOT /Users/maciek/Desktop/cocos2d-x-3.8.1/tools/cocos2d-console/bin
-set -x PATH $PATH $COCOS_CONSOLE_ROOT
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-set -x COCOS_TEMPLATES_ROOT /Users/maciek/Desktop/cocos2d-x-3.8.1/templates
-set -x PATH $PATH $COCOS_TEMPLATES_ROOT
-
-alias weather "curl http://wttr.in/poznan"
-
-source "$HOME/.kiex/scripts/kiex.fish"
