@@ -3,11 +3,8 @@ if test -d $HOME/.bin
 end
 
 if test -f $HOME/.dotfiles/custom/config.fish
-  . $HOME/.dotfiles/custom/config.fish
+  source $HOME/.dotfiles/custom/config.fish
 end
-
-# Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
 
 # Theme
 set fish_theme bobthefish
@@ -20,8 +17,6 @@ set fish_plugins rvm bundler rails
 # Path to your custom folder (default path is $FISH/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
-# Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
 
 # set TERM xterm-256color
 
@@ -43,4 +38,3 @@ set -x LESS_TERMCAP_ue \e'[0m'           # end underline
 set -x LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 set -gx PATH /usr/local/bin $PATH
-
