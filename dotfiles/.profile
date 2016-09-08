@@ -26,3 +26,5 @@ export EDITOR=vim
 
 alias ai="apt-get install"
 alias as="apt search"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -41,3 +41,5 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
 
 source $HOME/.dotfiles/vendor/tmuxinator/completion/tmuxinator.zsh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -1,6 +1,6 @@
 [user]
-  name = Jacek Tomaszewski
-  email = jacek@jtom.me
+  name = Maciej Kaszubowski
+  email = maciej@mkaszubowski.pl
 #[http]
 #  sslVerify = false
 [alias]
@@ -13,6 +13,7 @@
   authors = "!git log --format='%aN <%aE>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn | cut -d' ' -f2-"
   b = branch
   c = commit
+  cm = commit -m
   ca = commit --amend --reuse-message=HEAD
   cl = clone
   cleanse = !git ls-files --others --exclude-standard | xargs rm
@@ -21,6 +22,7 @@
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   cp = cherry-pick
   d = diff
+  df = diff --staged
   f = fetch
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   root = !cd $(git rev-parse --show-toplevel)
@@ -49,8 +51,14 @@
   cmd = subl -w $MERGED
   trustExitCode = false
 [github]
-	user = jtomaszewski
+	user = mkaszubowski
 [push]
 	default = current
 [hub]
 	protocol = ssh
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[pull]
+	default = current
