@@ -1,6 +1,6 @@
 [user]
-  name = Maciej Kaszubowski
-  email = maciej@mkaszubowski.pl
+	name = Maciej Kaszubowski
+	email = maciej@mkaszubowski.pl
 #[http]
 #  sslVerify = false
 [alias]
@@ -16,6 +16,8 @@
   cm = commit -m
   ca = commit --amend --reuse-message=HEAD
   cl = clone
+  pom = pull origin master
+  po = pull origin
   cleanse = !git ls-files --others --exclude-standard | xargs rm
   co = checkout
   com = checkout master
@@ -46,7 +48,7 @@
   branch = auto
 [core]
   excludesfile = ~/.gitignore_global
-  editor = vim
+	editor = nvim
 [mergetool "sublime"]
   cmd = subl -w $MERGED
   trustExitCode = false
@@ -57,8 +59,11 @@
 [hub]
 	protocol = ssh
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
 [pull]
 	default = current
+[commit]
+	verbose = true
