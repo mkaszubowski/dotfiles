@@ -37,4 +37,10 @@ set -x LESS_TERMCAP_so \e'[38;5;246m'   # begin standout-mode - info box
 set -x LESS_TERMCAP_ue \e'[0m'           # end underline
 set -x LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
-set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/local/bin ~/dev/bin /Users/maciej/.asdf/installs/elixir/1.5.1/.mix/escripts $PATH
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+source ~/.asdf/asdf.fish
+
+alias vim nvim
+
