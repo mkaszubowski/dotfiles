@@ -42,5 +42,6 @@ set -gx PATH /usr/local/bin ~/dev/bin /Users/maciej/.asdf/installs/elixir/1.5.1/
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 source ~/.asdf/asdf.fish
 
-alias vim nvim
+set -x ERL_AFLAGS "-kernel shell_history enabled"
 
+alias vim nvim

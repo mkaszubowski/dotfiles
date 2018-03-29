@@ -28,3 +28,8 @@ alias ai="apt-get install"
 alias as="apt search"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export APP_VERSION=2017.02.151557
+
+export PATH="$HOME/.cargo/bin:$PATH"

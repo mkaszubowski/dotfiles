@@ -45,3 +45,7 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Users/maciek/Desktop/cocos2d-x-3.8.1/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$HOME/.cargo/bin:$PATH"
